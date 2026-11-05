@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde-oscuro: #0f5a45;
+  --verde-medio: #7aa874;
+  --crema: #d6d48b;
+  --fondo: #f4f6f5;
+  --texto: #1f2937;
+  --gris: #6b7280;
+  --borde: #d1d5db;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+}
+
+/* Pantalla dividida en dos columnas */
+.login-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 100vh;
+}
+
+/* Panel izquierdo: marca */
+.brand-panel {
+  background: linear-gradient(160deg, var(--crema), var(--verde-medio) 60%, var(--verde-oscuro));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.brand-name {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand-tagline {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Panel derecho: formulario */
+.form-panel {
+  background: var(--fondo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+  font-size: 1.6rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  color: var(--gris);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Campos */
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--verde-oscuro);
+  box-shadow: 0 0 0 3px rgba(15, 90, 69, 0.15);
+}
+
+/* Enlace y botón */
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 1.5rem;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--verde-oscuro);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background: #0b4534;
+}
+
+/* Celulares: una sola columna */
+@media (max-width: 800px) {
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel {
+    padding: 2rem;
+  }
+}
